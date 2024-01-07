@@ -1,5 +1,10 @@
 { wineWow64Packages, fetchFromGitLab }:
-wineWow64Packages.full.overrideAttrs (old: {
+let
+  wineUnstable = wineWow64Packages.full.override (old: {
+    wineRelease = "unstable";
+  });
+in
+wineUnstable.overrideAttrs (old: {
   src = fetchFromGitLab {
     domain = "gitlab.winehq.org";
     owner = "elementalwarrior";

@@ -7,7 +7,7 @@ wineEnv="$selfpath/wine"
 
 ./affinity.sh wineboot --init
 # FIXME: fix in wine packaging
-./affinity.sh wine "$selfpath/wine-mono-8.1.0-x86.msi"
+./affinity.sh wine "$wineEnv/share/wine/mono/wine-mono-8.1.0-x86.msi"
 ./affinity.sh winetricks -q dotnet48 corefonts
 ./affinity.sh wine winecfg -v win11
 # grab from a real windows computer
