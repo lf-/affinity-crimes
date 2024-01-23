@@ -20,7 +20,7 @@ Copy `C:\Windows\System32\WinMetadata` from a Windows computer to `license_viola
 Install it
 
 ```
-./affinity.sh ./affinity-designer-msi-2.3.0.exe
+./affinity.sh wine ./affinity-designer-msi-2.3.0.exe
 ```
 
 Run it
