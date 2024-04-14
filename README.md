@@ -1,9 +1,22 @@
 # affinity crimes
 
-This repo makes Affinity Designer allegedly work on Linux, allegedly. Or so it
-is claimed. It seems to crash a lot.
+This repo makes Affinity Photo and Affinity Designer work on Linux, far better
+than they have any right to do, but with some known issues.
+
+It is generally good enough that you can happily do art on Linux, albeit with
+some limited set of known warts.
 
 Based on: https://codeberg.org/Wanesty/affinity-wine-docs
+
+## Known issues
+
+- Can't reattach panels to the app window: https://codeberg.org/wanesty/affinity-wine-docs/issues/12
+- Settings saving across restarts is broken: https://codeberg.org/wanesty/affinity-wine-docs/issues/11
+- Exporting PNGs works properly but breaks/crashes the app afterwards: https://codeberg.org/wanesty/affinity-wine-docs/issues/10
+
+  SVG works fine.
+- Possible occasional crashes of unknown cause? I can't remember. Consider
+  hitting the save button frequently as one should do in these things anyway.
 
 ## Howto
 
@@ -52,6 +65,8 @@ a graphics driver. Also, you have to use the correct one, either `nixGL` or
 `nixVulkan` depending on your graphics backend. If only someone wrote a
 [`nixYuri` of both of
 them](https://github.com/lf-/dotfiles/blob/main/configs/nix/packages/nixYuri/package.nix).
+
+Specifically, use `nixYuri ./affinity.sh [...]`.
 
 ### Font rendering
 
