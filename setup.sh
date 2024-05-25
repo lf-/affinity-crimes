@@ -11,7 +11,7 @@ source "$selfpath/affinity.sh"
 WINEDLLOVERRIDES="mscoree=" wineboot --init
 # FIXME: fix in wine packaging
 wine msiexec /i "$wineEnv/share/wine/mono/wine-mono-8.1.0-x86.msi"
-winetricks -q dotnet48 corefonts
+winetricks -q dotnet48 corefonts vcrun2015
 wine winecfg -v win11
 # grab from a real windows computer
 cp -r "$selfpath/license_violations/WinMetadata" "$WINEPREFIX/drive_c/windows/system32/"
